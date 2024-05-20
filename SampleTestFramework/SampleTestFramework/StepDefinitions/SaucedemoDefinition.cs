@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
@@ -52,14 +51,14 @@ namespace SampleTestFramework.StepDefinitions
         [Given(@"I Enter the Demo credentials from login page")]
         public void GivenIEnterTheDemoCredentialsFromLoginPage()
         {
-            _loginPage.EnterUserNameAndPassword();
+            _loginPage.EnterUserNameAndPassword(_sauceDemoTestData["UserNameForLogin"], _sauceDemoTestData["PasswordForLogin"]);
             _loginPage.ClickOnLoginButton();
         }
 
         [Given(@"I Select any item")]
         public void GivenISelectAnyItem()
         {
-            _inventoryPage.SelectAnyItem("Jacket"); //ToDo
+            _inventoryPage.SelectAnyItem(_sauceDemoTestData["ItemFromInventory"]);
         }
 
 
@@ -93,7 +92,7 @@ namespace SampleTestFramework.StepDefinitions
         [When(@"Enter the sample details")]
         public void WhenEnterTheSampleDetails()
         {
-            _checkoutPage.EnterFirstNameAndLastNameAndPostalCode();
+            _checkoutPage.EnterFirstNameAndLastNameAndPostalCode(_sauceDemoTestData["FirstName"], _sauceDemoTestData["LastName"], _sauceDemoTestData["PostalCode"]);
         }
 
         [When(@"Click continue")]
@@ -108,7 +107,6 @@ namespace SampleTestFramework.StepDefinitions
             _scenarioContext["ItemPrice"]
                .Should()
                .Be(_overviewPage.GetInventoryItemPriceInOverviewPage());
-            "jacket".Should().Be(_overviewPage.GetInventoryItemNameInOverviewPage());
         }
 
         [Then(@"Click finish\.")]

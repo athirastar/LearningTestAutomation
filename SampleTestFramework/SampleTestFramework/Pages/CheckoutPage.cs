@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SampleTestFramework.DriverSetup;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace SampleTestFramework.Pages
 {
-    public class CheckoutPage
+    public class CheckoutPage : BasePage
     {
-        IWebDriver _browserDriver;
-        public CheckoutPage(DriverInitializer initializer)
+        WebDriverWait _wait;
+        public CheckoutPage(DriverInitializer initializer) : base(initializer)
         {
-            _browserDriver = initializer.driver;
+            _wait = new WebDriverWait(_browserDriver, TimeSpan.FromSeconds(5));
         }
 
         /// <summary>
@@ -35,16 +37,19 @@ namespace SampleTestFramework.Pages
         private IWebElement ContinueButtonInCheckoutPage => _browserDriver.FindElement(By.XPath(_continueButtonInCheckoutPageLocator));
 
 
-        public void EnterFirstNameAndLastNameAndPostalCode()
+        public void EnterFirstNameAndLastNameAndPostalCode(string firstName, string lastName, string postalCode)
         {
-            Thread.Sleep(5000);
-            FirstNameFieldInCheckoutPage.SendKeys("abcd"); //ToDo
-            LastNameFieldInCheckoutPage.SendKeys("secredd"); //ToDo
-            PostalCodeFieldInCheckoutPage.SendKeys("33");
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_firstNameFieldInCheckoutPageLocator)));
+            FirstNameFieldInCheckoutPage.SendKeys(firstName);
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_lastNameFieldInCheckoutPageLocator)));
+            LastNameFieldInCheckoutPage.SendKeys(lastName);
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_postalCodeFieldInCheckoutPageLocator)));
+            PostalCodeFieldInCheckoutPage.SendKeys(postalCode);
         }
 
         public void ClickOnContinueButtonFromCheckoutPage()
         {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(ContinueButtonInCheckoutPage));
             ContinueButtonInCheckoutPage.Click();
         }
     }

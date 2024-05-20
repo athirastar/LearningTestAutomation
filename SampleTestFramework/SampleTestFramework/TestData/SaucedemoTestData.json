@@ -1,10 +1,8 @@
 {
-  "oaifdns": "kjhadfs",
-  "dsfa": "kjhadfs",
-  "dfas": "kjhadfs",
-  "dasf": "kjhadfs",
-  "dafs": "kjhadfs",
-  "fdas": "kjhadfs",
-  "afds": "kjhadfs",
-  "fads": "kjhadfs"
+  "UserNameForLogin": "standard_user",
+  "PasswordForLogin": "secret_sauce",
+  "ItemFromInventory": "Jacket",
+  "FirstName": "athira",
+  "LastName": "ap",
+  "PostalCode": "670"
 }

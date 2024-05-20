@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SampleTestFramework.DriverSetup;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,12 @@ namespace SampleTestFramework.Pages
 {
     internal class OverviewPage : BasePage
     {
+        WebDriverWait _wait;
         //IWebDriver _browserDriver;
         public OverviewPage(DriverInitializer initializer) : base(initializer)
         {
             //_browserDriver = initializer.driver;
+            _wait = new WebDriverWait(_browserDriver, TimeSpan.FromSeconds(5));
         }
 
 
@@ -44,6 +48,7 @@ namespace SampleTestFramework.Pages
 
         public void ClickOnFinishButtonInOverviewPage()
         {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(FinishButtonInOverviewPage));
             FinishButtonInOverviewPage.Click();
         }
 

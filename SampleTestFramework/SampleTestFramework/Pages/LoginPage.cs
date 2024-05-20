@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SampleTestFramework.DriverSetup;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,17 +50,18 @@ namespace SampleTestFramework.Pages
             _browserDriver.Manage().Window.Maximize();
         }
 
-        public void EnterUserNameAndPassword()
+        public void EnterUserNameAndPassword(string userName, string passWord)
         {
-            Thread.Sleep(5000);
-            UserNameField.SendKeys("standard_user"); //ToDo
-            PasswordField.SendKeys("secret_sauce"); //ToDo
+           _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_usernameFieldLocator)));
+            UserNameField.SendKeys(userName);
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_passwordFieldLocator)));
+            PasswordField.SendKeys(passWord);
         }
 
         public void ClickOnLoginButton()
         {
-            Thread.Sleep(5000);
-            LoginButton.Click(); //ToDo
+            _wait.Until(ExpectedConditions.ElementToBeClickable(LoginButton));
+            LoginButton.Click();
         }
     }
 }

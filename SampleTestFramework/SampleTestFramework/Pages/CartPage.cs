@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SampleTestFramework.DriverSetup;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,10 @@ namespace SampleTestFramework.Pages
 {
     internal class CartPage : BasePage
     {
-        
+        WebDriverWait _wait;
         public CartPage(DriverInitializer initializer) : base(initializer)
         {
-            
+            _wait = new WebDriverWait(_browserDriver, TimeSpan.FromSeconds(5));
         }
 
         /// <summary>
@@ -36,6 +38,7 @@ namespace SampleTestFramework.Pages
 
        public void ClickOnCheckoutButtonFromCartPage()
        {
+            _wait.Until(ExpectedConditions.ElementToBeClickable(CheckoutButton));
             CheckoutButton.Click();
        }
     }
