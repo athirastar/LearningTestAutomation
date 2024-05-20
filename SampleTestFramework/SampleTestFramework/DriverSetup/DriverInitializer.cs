@@ -14,8 +14,6 @@ namespace SampleTestFramework.DriverSetup
             // Web driver manager
             new DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver();
-
-            //selenium manager
         }
     }
 }
