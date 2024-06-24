@@ -46,4 +46,7 @@
   <ItemGroup>
     <Compile Remove="Feature\SauceDemo.feature.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Selenium.Core\Selenium.Core.csproj" />
+  </ItemGroup>
 </Project>

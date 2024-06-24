@@ -1,0 +1,17 @@
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\Selenium.Core.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\Selenium.Core.pdb
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\WebDriver.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\WebDriver.Support.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\WebDriver.xml
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\bin\Debug\WebDriver.Support.xml
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\obj\Debug\Selenium.Core.csproj.AssemblyReference.cache
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\obj\Debug\Selenium.Core.csproj.CoreCompileInputs.cache
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\obj\Debug\Selenium.15E42BF7.Up2Date
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\obj\Debug\Selenium.Core.dll
+C:\Users\athira_ap\Source\repos\SampleTestFramework\Selenium.Core\obj\Debug\Selenium.Core.pdb

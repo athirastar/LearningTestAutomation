@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Selenium.Core.Extensions;
 
 namespace SampleTestFramework.Pages
 {
@@ -24,9 +25,9 @@ namespace SampleTestFramework.Pages
         /// <summary>
         /// 
         /// </summary>
-        private string _usernameFieldLocator = "//input[@id='user-name']";
+        private By _usernameFieldLocator = By.XPath("//input[@id='user-name']");
 
-        private IWebElement UserNameField => _browserDriver.FindElement(By.XPath(_usernameFieldLocator));
+        private IWebElement UserNameField => _browserDriver.GetElement(_usernameFieldLocator);
 
         /// <summary>
         /// 
@@ -52,7 +53,6 @@ namespace SampleTestFramework.Pages
 
         public void EnterUserNameAndPassword(string userName, string passWord)
         {
-           _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_usernameFieldLocator)));
             UserNameField.SendKeys(userName);
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_passwordFieldLocator)));
             PasswordField.SendKeys(passWord);

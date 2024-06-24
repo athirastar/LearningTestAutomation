@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj": {
+                "projectPath": "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -168,6 +172,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj",
+        "projectName": "Selenium.Core",
+        "projectPath": "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

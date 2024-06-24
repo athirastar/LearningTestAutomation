@@ -1788,6 +1788,15 @@
         "runtime": {
           "lib/netstandard2.1/WebDriverManager.dll": {}
         }
+      },
+      "Selenium.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Selenium.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Selenium.Core.dll": {}
+        }
       }
     }
   },
@@ -5786,6 +5795,11 @@
         "webdrivermanager.2.17.2.nupkg.sha512",
         "webdrivermanager.nuspec"
       ]
+    },
+    "Selenium.Core/1.0.0": {
+      "type": "project",
+      "path": "../Selenium.Core/Selenium.Core.csproj",
+      "msbuildProject": "../Selenium.Core/Selenium.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5802,6 +5816,7 @@
       "NUnit3TestAdapter >= 4.5.0",
       "NUnitTestAdapter >= 2.3.0",
       "Newtonsoft.Json >= 13.0.3",
+      "Selenium.Core >= 1.0.0",
       "Selenium.Support >= 4.18.0",
       "Selenium.WebDriver >= 4.21.0",
       "SeleniumExtras.WaitHelpers >= 1.0.0",
@@ -5844,7 +5859,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj": {
+              "projectPath": "C:\\Users\\athira_ap\\Source\\repos\\SampleTestFramework\\Selenium.Core\\Selenium.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
