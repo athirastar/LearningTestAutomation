@@ -33,7 +33,8 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Security.AccessControl": "6.0.0",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "WebDriverManager": "2.17.2"
+          "WebDriverManager": "2.17.2",
+          "Selenium.Core": "1.0.0.0"
         },
         "runtime": {
           "SampleTestFramework.dll": {}
@@ -1036,6 +1037,14 @@
             "fileVersion": "2.17.2.0"
           }
         }
+      },
+      "Selenium.Core/1.0.0.0": {
+        "runtime": {
+          "Selenium.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1709,6 +1718,11 @@
       "sha512": "sha512-SHojgD2qz1G+2y0a+U96Z+ciGMGBf+mJMNSH1ojYU1AGnjDpGIRKSef0pT/nySRZm6NxQWOGdwqdCIhqsYDFtA==",
       "path": "webdrivermanager/2.17.2",
       "hashPath": "webdrivermanager.2.17.2.nupkg.sha512"
+    },
+    "Selenium.Core/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

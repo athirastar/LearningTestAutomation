@@ -49,4 +49,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Selenium.Core\Selenium.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Selenium.Core">
+      <HintPath>..\Selenium.Core\obj\Debug\Selenium.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

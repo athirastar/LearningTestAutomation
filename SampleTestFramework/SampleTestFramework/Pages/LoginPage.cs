@@ -25,6 +25,7 @@ namespace SampleTestFramework.Pages
         /// <summary>
         /// 
         /// </summary>
+        
         private By _usernameFieldLocator = By.XPath("//input[@id='user-name']");
 
         private IWebElement UserNameField => _browserDriver.GetElement(_usernameFieldLocator);
@@ -32,16 +33,16 @@ namespace SampleTestFramework.Pages
         /// <summary>
         /// 
         /// </summary>
-        private string _passwordFieldLocator = "//input[@id='password']";
+        private By _passwordFieldLocator = By.XPath("//input[@id='password']");
 
-        private IWebElement PasswordField => _browserDriver.FindElement(By.XPath(_passwordFieldLocator));
+        private IWebElement PasswordField => _browserDriver.GetElement(_passwordFieldLocator);
 
         /// <summary>
         /// 
         /// </summary>
-        private string _loginButtonLocator = "//input[@id='login-button']";
+        private By _loginButtonLocator = By.XPath("//input[@id='login-button']");
 
-        private IWebElement LoginButton => _browserDriver.FindElement(By.XPath(_loginButtonLocator));
+        private IWebElement LoginButton => _browserDriver.GetElement(_loginButtonLocator);
 
         #endregion
 
@@ -54,13 +55,12 @@ namespace SampleTestFramework.Pages
         public void EnterUserNameAndPassword(string userName, string passWord)
         {
             UserNameField.SendKeys(userName);
-            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(_passwordFieldLocator)));
             PasswordField.SendKeys(passWord);
         }
 
         public void ClickOnLoginButton()
         {
-            _wait.Until(ExpectedConditions.ElementToBeClickable(LoginButton));
+            //_wait.Until(ExpectedConditions.ElementToBeClickable(LoginButton));
             LoginButton.Click();
         }
     }

@@ -27,5 +27,21 @@ namespace Selenium.Core.Extensions
             }
             
         }
+        public static IWebElement GetElement12(this IWebDriver driver, By locator, int timeoutInSeconds = 20)
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+                var element = wait.Until(ExpectedConditions.ElementIsVisible(locator));
+                return element;
+            }
+            catch (WebDriverTimeoutException)
+            {
+
+                throw new WebDriverTimeoutException(
+                 $"Element with locator '{locator}' not visible within '{timeoutInSeconds}' seconds.");
+            }
+
+        }
     }
 }
