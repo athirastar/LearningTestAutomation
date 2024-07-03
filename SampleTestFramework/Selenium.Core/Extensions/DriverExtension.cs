@@ -27,7 +27,7 @@ namespace Selenium.Core.Extensions
             }
             
         }
-        public static IWebElement GetElement12(this IWebDriver driver, By locator, int timeoutInSeconds = 20)
+        public static IWebElement GetElementForClickable(this IWebDriver driver, By locator, int timeoutInSeconds = 20)
         {
             try
             {

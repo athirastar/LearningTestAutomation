@@ -42,7 +42,7 @@ namespace SampleTestFramework.Pages
         /// </summary>
         private By _loginButtonLocator = By.XPath("//input[@id='login-button']");
 
-        private IWebElement LoginButton => _browserDriver.GetElement(_loginButtonLocator);
+        private IWebElement LoginButton => _browserDriver.GetElementForClickable(_loginButtonLocator);
 
         #endregion
 
